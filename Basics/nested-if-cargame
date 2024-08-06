@@ -1,0 +1,35 @@
+
+from tracemalloc import start
+
+
+command = ""
+started = False
+while True:
+  command = input("> ").lower()
+  if command == "start":
+    if started:
+      print("Car already running")
+      
+    else:
+      print("Car Started")
+      started = True
+  
+  elif command == "stop":
+    if not started:
+      print("Car is not running")
+    else:
+      print("Car stopped")
+      started = False
+  
+  elif command == 'help':
+    print("""
+start = to start the car
+stop = to stop the car
+quit = to exit the game
+         """)
+  elif command == "quit":
+    print("Quitting.... Goodbye")
+    break
+  else:
+    print("I dont understand that")
+                                                              
